@@ -7,36 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Maps Custom Theme</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
+
     <div id="app" class="container-fluid">
-        <div class="main-container">
-            <div id="map" class="main-container__map"></div>
-            <div id="controls" class="main-container__controls">
-                <div class="controls-group">
-                    <form name="form" action="">
-                        <h1 class="controls-group__header">Select Theme</h1>
-                        <div class="controls-group__radio-">
-                            <div>
-                                <label for="theme-dark">Dark</label>
-                                <input type="radio" name="theme" id="theme-dark" value="dark">
+        <div class="row">
+            <div class="col-9">
+                <div class="card p-5">
+                    <div id="map" style="height: 500px"></div>
+                </div>
+            </div>
+            <div id="controls" class="col">
+                <div class="card p-5">
+                    <div class="controls-group">
+                        <form name="form" action="">
+                            <h1 class="controls-group__header">Select Theme</h1>
+                            <div class="controls-group__radio-">
+                                <div>
+                                    <label for="theme-dark">Dark</label>
+                                    <input type="radio" name="theme" id="theme-dark" value="dark">
+                                </div>
+                                <div>
+                                    <label for="theme-dark">Light</label>
+                                    <input type="radio" name="theme" id="theme-light" value="light">
+                                </div>
+                                <div>
+                                    <label for="theme-dark">Random</label>
+                                    <input type="radio" name="theme" id="theme-random" value="random">
+                                </div>
                             </div>
-                            <div>
-                                <label for="theme-dark">Light</label>
-                                <input type="radio" name="theme" id="theme-light" value="light">
-                            </div>
-                            <div>
-                                <label for="theme-dark">Random</label>
-                                <input type="radio" name="theme" id="theme-random" value="random">
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANQuBI8WdReWn7HO0HAiBeJYEqDZoXsao&callback=initMap"
         async>
